@@ -1,0 +1,23 @@
+---
+import { SITE_DESCRIPTION, SITE_TITLE } from '../config'
+---
+
+<header class='header'>
+    <div class='header__inner'>
+        <h1>{SITE_TITLE}</h1>
+        <h2>{SITE_DESCRIPTION}</h2>
+    </div>
+</header>
+
+<style>
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .header__inner {
+        max-width: 24rem;
+    }
+</style>

@@ -1,0 +1,59 @@
+---
+import type { CollectionEntry } from 'astro:content'
+
+import FormattedDate from '~/components/FormattedDate.astro'
+import Navigation from '~/components/Navigation.astro'
+import Container from '~/components/Container.astro'
+import Header from '~/components/Header.astro'
+import { SITE_LANG } from '~/config'
+
+import ColorScript from '../scripts/ColorScript.astro'
+import BaseHead from '../components/BaseHead.astro'
+import TagList from '../components/TagList.astro'
+import Footer from '../components/Footer.astro'
+
+interface Props {
+    content: CollectionEntry<'posts'>['data']
+}
+
+const {
+    content: { tags, title, description, added, updated }
+} = Astro.props
+---
+
+<!doctype html>
+<html lang={SITE_LANG}>
+    <BaseHead description={description} title={title} />
+    <body>
+        <Container>
+            <Header />
+            <Navigation />
+            <main>
+                <article>
+                    <header>
+                        <h1>{title}</h1>
+                        <p>
+                            <small>
+                                publicado em <FormattedDate date={added} />
+                                {
+                                    updated && (
+                                        <>
+                                            , atualizado em <FormattedDate date={updated} />
+                                        </>
+                                    )
+                                }
+                            </small>
+                        </p>
+                        <TagList tags={tags} />
+                    </header>
+                    <hr />
+                    <div>
+                        <slot />
+                    </div>
+                </article>
+            </main>
+            <Footer />
+        </Container>
+        <ColorScript />
+    </body>
+</html>

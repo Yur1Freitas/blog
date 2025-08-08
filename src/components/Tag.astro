@@ -1,0 +1,27 @@
+---
+import type { HTMLAttributes } from 'astro/types'
+
+interface Props extends Omit<HTMLAttributes<'a'>, 'href'> {
+    name: string
+}
+
+const { name, class: className, ...props } = Astro.props
+---
+
+<a class:list={['tag', className]} href={`/tag/${name}`} {...props}>
+    #{name}
+</a>
+
+<style>
+    .tag {
+        display: inline-block;
+        font-size: 0.75rem;
+        text-decoration: none;
+
+        border-radius: 8px;
+        padding: 0.125rem 0.35rem;
+
+        color: hsl(var(--tag-foreground));
+        background-color: hsl(var(--tag));
+    }
+</style>
