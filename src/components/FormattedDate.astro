@@ -1,0 +1,23 @@
+---
+import type { HTMLAttributes } from 'astro/types'
+
+import parseDate from '~/utils/parseDate'
+
+interface Props extends HTMLAttributes<'time'> {
+    date: string | number | Date
+}
+
+const { date, ...props } = Astro.props
+
+const value = parseDate(date)
+---
+
+<time datetime={value.toISOString()} {...props}>
+    {
+        value.toLocaleDateString('pt-BR', {
+            year: 'numeric',
+            month: 'short',
+            day: 'numeric'
+        })
+    }
+</time>

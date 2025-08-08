@@ -1,0 +1,37 @@
+---
+import type { CollectionEntry } from 'astro:content'
+
+import sortByDate from '~/utils/sortByDate'
+
+import Post from '../components/Post.astro'
+
+interface Props {
+    sort?: boolean
+    limit?: number
+    posts: CollectionEntry<'posts'>[]
+}
+
+const { posts, limit, sort } = Astro.props
+
+const data = (sort ? sortByDate(posts) : posts).slice(0, limit)
+---
+
+<ul class='post-list'>
+    {
+        data.map(({ data: { slug, title, tags, description, added: date } }) => {
+            return (
+                <li>
+                    <Post {description} {title} {slug} {tags} {date} />
+                </li>
+            )
+        })
+    }
+</ul>
+
+<style>
+    .post-list {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem 0;
+    }
+</style>

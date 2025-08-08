@@ -1,0 +1,35 @@
+<script is:inline>
+    ;(() => {
+        const colors = ['var(--red)', 'var(--orange)', 'var(--yellow)', 'var(--lime)', 'var(--green)', 'var(--cyan)']
+
+        function getRandomColor() {
+            return colors[Math.floor(Math.random() * colors.length)]
+        }
+
+        function setRandomLinkColor() {
+            const links = Array.from(document.getElementsByTagName('a'))
+
+            for (const link of links) {
+                const color = getRandomColor()
+
+                if (link.classList.contains('tag')) {
+                    link.style.setProperty('color', color)
+                    continue
+                }
+
+                link.style.setProperty('text-decoration-color', color)
+            }
+        }
+
+        function setColorHoverListener() {
+            const elements = Array.from(document.querySelectorAll('a, button'))
+
+            for (const element of elements) {
+                element.addEventListener('mouseover', setRandomLinkColor)
+            }
+        }
+
+        setRandomLinkColor()
+        setColorHoverListener()
+    })()
+</script>

@@ -1,0 +1,43 @@
+---
+import { getCollection } from 'astro:content'
+
+import SubscribeRSS from '~/components/SubscribeRSS.astro'
+import Navigation from '~/components/Navigation.astro'
+import Container from '~/components/Container.astro'
+import TagList from '~/components/TagList.astro'
+import Header from '~/components/Header.astro'
+import getTags from '~/utils/getTags'
+
+import { SITE_DESCRIPTION, SITE_TITLE, SITE_LANG } from '../config'
+import ColorScript from '../scripts/ColorScript.astro'
+import BaseHead from '../components/BaseHead.astro'
+import PostList from '../components/PostList.astro'
+import Footer from '../components/Footer.astro'
+
+const posts = await getCollection('posts')
+const tags = getTags(posts)
+---
+
+<!doctype html>
+<html lang={SITE_LANG}>
+    <BaseHead description={SITE_DESCRIPTION} title={SITE_TITLE} />
+    <body>
+        <Container>
+            <Header />
+            <Navigation />
+            <main>
+                <section>
+                    <h3>Postagens</h3>
+                    <div>
+                        <TagList {tags} />
+                    </div>
+                    <hr />
+                    <PostList posts={posts} sort />
+                    <SubscribeRSS />
+                </section>
+            </main>
+            <Footer />
+        </Container>
+        <ColorScript />
+    </body>
+</html>

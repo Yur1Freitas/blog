@@ -1,0 +1,52 @@
+---
+import type { CollectionEntry } from 'astro:content'
+import type { GetStaticPathsResult } from 'astro'
+
+import { getCollection } from 'astro:content'
+
+import { SITE_DESCRIPTION, SITE_TITLE, SITE_LANG } from '~/config'
+import Navigation from '~/components/Navigation.astro'
+import ColorScript from '~/scripts/ColorScript.astro'
+import Container from '~/components/Container.astro'
+import BaseHead from '~/components/BaseHead.astro'
+import PostList from '~/components/PostList.astro'
+import Header from '~/components/Header.astro'
+import Footer from '~/components/Footer.astro'
+import groupByTag from '~/utils/groupByTag'
+
+export async function getStaticPaths(): Promise<GetStaticPathsResult> {
+    const posts = await getCollection('posts')
+    const postsGroupedByTag = groupByTag(posts)
+
+    return Object.entries(postsGroupedByTag).map(([tag, posts]) => ({
+        params: { tag },
+        props: { posts }
+    }))
+}
+
+interface Props {
+    posts: CollectionEntry<'posts'>[]
+}
+
+const { posts } = Astro.props
+const { tag } = Astro.params
+---
+
+<!doctype html>
+<html lang={SITE_LANG}>
+    <BaseHead description={SITE_DESCRIPTION} title={SITE_TITLE} />
+    <body>
+        <Container>
+            <Header />
+            <Navigation />
+            <main>
+                <section>
+                    <h3>Postagens marcadas com "{tag}"</h3>
+                    <PostList posts={posts} sort />
+                    <Footer />
+                </section>
+            </main>
+        </Container>
+        <ColorScript />
+    </body>
+</html>

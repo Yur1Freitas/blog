@@ -1,0 +1,22 @@
+---
+import type { HTMLAttributes } from 'astro/types'
+
+type Props = HTMLAttributes<'div'>
+
+const { class: className, ...props } = Astro.props
+---
+
+<div class:list={['container', className]} {...props}>
+    <slot />
+</div>
+
+<style>
+    .container {
+        width: 100%;
+        min-height: 100vh;
+        max-width: 70ch;
+
+        margin: 0 auto;
+        padding: 3rem 1rem;
+    }
+</style>

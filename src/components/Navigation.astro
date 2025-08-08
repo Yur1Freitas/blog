@@ -1,0 +1,23 @@
+---
+import NavLink from './NavLink.astro'
+---
+
+<nav class='navigation'>
+    <NavLink href='/'>home</NavLink>
+    <NavLink href='/posts'>postagens</NavLink>
+    <NavLink href='https://github.com/yur1freitas'>github</NavLink>
+</nav>
+
+<style>
+    .navigation {
+        position: sticky;
+        top: 0;
+
+        padding: 1rem;
+        text-align: center;
+        background-color: hsl(var(--background) / 0.1);
+
+        -webkit-backdrop-filter: blur(1px);
+        backdrop-filter: blur(1px);
+    }
+</style>

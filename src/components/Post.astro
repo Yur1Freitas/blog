@@ -1,0 +1,52 @@
+---
+import FormattedDate from './FormattedDate.astro'
+import TagList from './TagList.astro'
+
+interface Props {
+    slug: string
+    title: string
+    tags: string[]
+    date: string | Date
+    description: string
+}
+
+const { slug, title, tags, date, description } = Astro.props
+---
+
+<div class='post'>
+    <div>
+        <a href={`/post/${slug}/`} class='post__title'>{title}</a>
+        <FormattedDate class='post__date' {date} />
+    </div>
+    <p class='post__description'>{description}</p>
+    <TagList {tags} />
+</div>
+
+<style>
+    .post {
+        width: fit-content;
+
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem 0;
+
+        padding: 0.75rem;
+        border-radius: 0.25rem;
+        border: 1px dashed hsl(var(--border));
+    }
+
+    .post__title {
+        font-size: 1.15rem;
+    }
+
+    .post__description {
+        margin: 0;
+        font-size: 0.875rem;
+        color: hsl(var(--foreground) / 0.85);
+    }
+
+    .post__date {
+        font-size: 0.875rem;
+        color: hsl(var(--foreground) / 0.65);
+    }
+</style>
