@@ -1,54 +1,80 @@
-# Cassidy's blog template
+<!-- Credits  -->
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/eab04209-5f7f-41ed-a8dd-c45a9ebb1834/deploy-status)](https://app.netlify.com/sites/blahg/deploys)
+[ORIGINAL_REPOSITORY]: https://github.com/cassidoo/blahg
+[CASSIDOO_GITHUB]: https://github.com/cassidoo
 
-Hello, welcome. This is a blog ("blahg" is the proper spelling for Chicagoans) template. It's built with [Astro](https://astro.build), and uses [TinaCMS](https://tina.io) to edit the content!
+<!-- Badges: https://github.com/Ileriayo/markdown-badges -->
 
-![cover](https://github.com/cassidoo/blahg/assets/1454517/b56ff04f-9499-48e7-be62-d9b422c4287d)
+[BUN_BADGE]: https://img.shields.io/badge/Bun-%23000000.svg?style=for-the-badge&logo=bun&logoColor=white
+[TYPESCRIPT_BADGE]: https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white
+[ASTRO_BADGE]: https://img.shields.io/badge/astro-%232C2052.svg?style=for-the-badge&logo=astro&logoColor=white
+[TINACMS_BADGE]: https://img.shields.io/badge/TinaCMS-FB542B?style=for-the-badge&logo=ollama&logoColor=white
 
-## See the blahg
+<!-- Official websites of the technologies used -->
 
-[blahg.netlify.app](https://blahg.netlify.app/)
+[ASTRO_SITE]: https://astro.build/
+[TINACMS_SITE]: https://tina.io/
+[TYPESCRIPT_SITE]: https://www.typescriptlang.org/
+[BUN_SITE]: https://bun.sh/
 
-## To use the template
+# Yur1's Blog Template
 
-- Connect to your chosen hosting provider (see Deploy to Netlify button below if you want to go that route, otherwise use the GitHub template button above and pick a different one)
-- Make an account at [tina.io](https://tina.io/)
-- Add your TinaCMS keys (see below)
-- Update `astro.config.mjs` with your domain
-- Edit `src/config.js`
-- Add your URL in line 1 of `public/robots.txt`
-- Add your links in `src/components/Header.astro`
-- Update the intro in `pages/about.md`
-- Edit the images in `public/` (optional)
-- Edit whatever tags you want in `tina/config.js` (optional)
+[![Astro][ASTRO_BADGE]][ASTRO_SITE]
+[![TinaCMS][TINACMS_BADGE]][TINACMS_SITE]
+[![TypeScript][TYPESCRIPT_BADGE]][TYPESCRIPT_SITE]
+[![Bun][BUN_BADGE]][BUN_SITE]
 
-After this, you can add your content to `posts/` with Markdown files, or with TinaCMS by going to `yoururl.com/admin`!
+Olá! Este é um template de blog criado a partir do template [blahg][ORIGINAL_REPOSITORY] por [cassidoo][CASSIDOO_GITHUB], por favor visitem e apoiem o projeto original! Agradecimentos [cassidoo][CASSIDOO_GITHUB]!
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/cassidoo/blahg)
+> [!NOTE]
+> Se você receber um erro remoto no esquema GraphQL, provavelmente precisará atualizar o TinaCMS, [detalhes aqui](https://tina.io/docs/introduction/faq#how-do-i-resolve-the-local-graphql-schema-doesnt-match-the-remote-graphql-schema-errors)!
 
-And finally, please ping me (via social media, or in a GitHub Issue, or whatever) if you use this template! I would love to see your writing and subscribe to your RSS feed!
+## 🌙 Dark Mode
 
-## Run it yourself
+![cover](demo/dark.png)
 
-All commands are run from the root of the project, from a terminal:
+# ☀️ Light Mode
 
-| Command                          | Action                                                        |
-| :------------------------------- | :------------------------------------------------------------ |
-| `npm install`                    | Installs dependencies                                         |
-| `npm run dev`                    | Starts local dev server at `localhost:4321`                   |
-| `npx tinacms dev -c 'astro dev'` | Manually run local server if the regular command doesn't work |
-| `npm run build`                  | Build your production site to `./dist/`                       |
-| `npm run preview`                | Preview your build locally, before deploying                  |
+![cover](demo/light.png)
 
-You go to `localhost:4321/admin/index.html` to see the CMS and use it. If you want to clone this for yourself, you'll need a `.env.development` file that has the following in it:
+## 🤔 Como usar
+
+- Conecte-se ao provedor de hospedagem escolhido
+- Crie uma conta em [tina.io](https://tina.io/)
+- Adicione suas chaves TinaCMS em `.env`
+- Atualize `astro.config.ts` com seu domínio
+- Edite `src/config.ts`
+- Adicione sua URL na linha 1 de `public/robots.txt`
+- Adicione seus links em `src/components/Header.astro`
+- Atualize a introdução em `pages/about.md`
+- Edite as imagens em `public/` (opcional)
+- Edite as tags que desejar em `tina/config.ts` (opcional)
+
+Depois disso, você pode adicionar seu conteúdo a `posts/` com arquivos Markdown ou com o TinaCMS, acessando `SUA_URL/admin`
+
+## 🚀 Run
+
+Todos os comandos são executados a partir da raiz do projeto, a partir de um terminal:
+
+| Comando           | Ação                                                  |
+| :---------------- | :---------------------------------------------------- |
+| `bun install`     | Instala as dependências                               |
+| `bun run dev`     | Inicia localmente o servido em `localhost:4321`       |
+| `bun run build`   | Compila seu projeto para produção em `./dist/`        |
+| `bun run preview` | Veja um preview do projeto compilado, antes do deploy |
+| `bun run format`  | Formata seu código com prettier                       |
+
+Acesse `localhost:4321/admin/index.html` para visualizar o CMS e utilizá-lo.
+
+> [!NOTE]
+> Este projeto foi configurado para usar `bun` como gerenciador de pacotes, mas pode facilmente ser substituído por `npm`, `yarn` ou `pnpm`. Basta instalar as dependências com um desses e excluir o `bun.lock`
+
+## 🌱 Variáveis de Ambiente
 
 ```
-TINACLIENTID=<from tina.io>
-TINATOKEN=<from tina.io>
-TINASEARCH=<from tina.io>
+TINACLIENTID=<credencial adquirida em tina.io>
+TINATOKEN=<credencial adquirida em tina.io>
+TINASEARCH=<credencial adquirida em tina.io>
+
+SITE=<url do seu site>
 ```
-
-If you get a remote GraphQL schema error, chances are you need to update TinaCMS, [details here](https://tina.io/docs/introduction/faq#how-do-i-resolve-the-local-graphql-schema-doesnt-match-the-remote-graphql-schema-errors)!
-
-**Have fun!**
