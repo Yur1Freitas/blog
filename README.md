@@ -75,6 +75,4 @@ Acesse `localhost:4321/admin/index.html` para visualizar o CMS e utilizá-lo.
 TINACLIENTID=<credencial adquirida em tina.io>
 TINATOKEN=<credencial adquirida em tina.io>
 TINASEARCH=<credencial adquirida em tina.io>
-
-SITE=<url do seu site>
 ```
