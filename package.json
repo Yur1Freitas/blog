@@ -9,7 +9,9 @@
         "preview": "astro preview",
         "dev": "tinacms dev -c 'astro dev'",
         "build": "tinacms build && astro build",
-        "format": "prettier --write ."
+        "format": "prettier --write .",
+        "lint": "oxlint",
+        "lint:fix": "oxlint --fix"
     },
     "dependencies": {
         "tinacms": "^2.8.2"
