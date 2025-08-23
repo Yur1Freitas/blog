@@ -203,5 +203,5 @@ td {
 
 ul,
 ol {
-    list-style: none;
+    padding-inline-start: 1rem;
 }
