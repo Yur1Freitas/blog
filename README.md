@@ -56,13 +56,15 @@ Depois disso, você pode adicionar seu conteúdo a `posts/` com arquivos Markdow
 
 Todos os comandos são executados a partir da raiz do projeto, a partir de um terminal:
 
-| Comando           | Ação                                                  |
-| :---------------- | :---------------------------------------------------- |
-| `bun install`     | Instala as dependências                               |
-| `bun run dev`     | Inicia localmente o servido em `localhost:4321`       |
-| `bun run build`   | Compila seu projeto para produção em `./dist/`        |
-| `bun run preview` | Veja um preview do projeto compilado, antes do deploy |
-| `bun run format`  | Formata seu código com prettier                       |
+| Comando            | Ação                                                    |
+| :----------------- | :------------------------------------------------------ |
+| `bun install`      | Instala as dependências                                 |
+| `bun run dev`      | Inicia localmente o servido em `localhost:4321`         |
+| `bun run build`    | Compila seu projeto para produção em `./dist/`          |
+| `bun run preview`  | Veja um preview do projeto compilado, antes do deploy   |
+| `bun run format`   | Formata seu código com prettier                         |
+| `bun run lint`     | Verifica o seu código com o oxlint                      |
+| `bun run lint:fix` | Verifica o seu código e corrigi alguns erros com oxlint |
 
 Acesse `localhost:4321/admin/index.html` para visualizar o CMS e utilizá-lo.
 
