@@ -1,4 +1,4 @@
-export const SITE_URL = import.meta.env.SITE
+export const SITE_URL = import.meta.env.DEV ? 'http://localhost:4321/' : import.meta.env.SITE
 
 export const SITE_LANG = 'pt-br'
 export const SITE_TITLE = 'Blog Template'
