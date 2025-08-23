@@ -9,6 +9,7 @@
 [TYPESCRIPT_BADGE]: https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white
 [ASTRO_BADGE]: https://img.shields.io/badge/astro-%232C2052.svg?style=for-the-badge&logo=astro&logoColor=white
 [TINACMS_BADGE]: https://img.shields.io/badge/TinaCMS-FB542B?style=for-the-badge&logo=ollama&logoColor=white
+[NETLIFY_BADGE]: https://api.netlify.com/api/v1/badges/699f6f50-0e4d-448a-8949-d727328f6642/deploy-status
 
 <!-- Official websites of the technologies used -->
 
@@ -16,6 +17,7 @@
 [TINACMS_SITE]: https://tina.io/
 [TYPESCRIPT_SITE]: https://www.typescriptlang.org/
 [BUN_SITE]: https://bun.sh/
+[NETLIFY_DEPLOYS]: https://app.netlify.com/projects/yur1-blog-template/deploys
 
 # Yur1's Blog Template
 
@@ -23,6 +25,8 @@
 [![TinaCMS][TINACMS_BADGE]][TINACMS_SITE]
 [![TypeScript][TYPESCRIPT_BADGE]][TYPESCRIPT_SITE]
 [![Bun][BUN_BADGE]][BUN_SITE]
+[![Netlify Status][NETLIFY_BADGE]][NETLIFY_DEPLOYS]
+
 
 Olá! Este é um template de blog criado a partir do template [blahg][ORIGINAL_REPOSITORY] por [cassidoo][CASSIDOO_GITHUB], por favor visitem e apoiem o projeto original! Agradecimentos [cassidoo][CASSIDOO_GITHUB]!
 
