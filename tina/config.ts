@@ -80,36 +80,28 @@ export default defineConfig({
                         list: true,
                         options: [
                             {
-                                value: 'technical',
-                                label: 'Technical'
+                                value: 'técnico',
+                                label: 'Técnico'
                             },
                             {
-                                value: 'advice',
-                                label: 'Advice'
+                                value: 'conselho',
+                                label: 'Conselho'
                             },
                             {
-                                value: 'events',
-                                label: 'Events'
+                                value: 'aprendendo',
+                                label: 'Aprendendo'
                             },
                             {
-                                value: 'learning',
-                                label: 'Learning'
+                                value: 'trabalho',
+                                label: 'Trabalho'
                             },
                             {
-                                value: 'meta',
-                                label: 'Meta'
+                                value: 'pessoal',
+                                label: 'Pessoal'
                             },
                             {
-                                value: 'work',
-                                label: 'Work'
-                            },
-                            {
-                                value: 'personal',
-                                label: 'Personal'
-                            },
-                            {
-                                value: 'musings',
-                                label: 'Musings'
+                                value: 'tutorial',
+                                label: 'Tutorial'
                             }
                         ]
                     },
