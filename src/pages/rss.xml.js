@@ -5,7 +5,9 @@ import { SITE_DESCRIPTION, SITE_TITLE, SITE_URL } from '../config'
 
 const posts = await getCollection('posts')
 const sortedPosts = posts.sort(
-    (a, b) => new Date(b.data.updated || b.data.added).valueOf() - new Date(a.data.updated || a.data.added).valueOf()
+    (a, b) => 
+        new Date(b.data.updated || b.data.added).valueOf() - 
+        new Date(a.data.updated || a.data.added).valueOf()
 )
 
 export const GET = () =>
@@ -23,5 +25,5 @@ export const GET = () =>
                 customData: `<updated>${post.data.updated ? post.data.updated : ''}</updated>`
             }
         }),
-        stylesheet: '/rss-styles.xsl'
+        stylesheet: 'rss/styles.xsl'
     })
