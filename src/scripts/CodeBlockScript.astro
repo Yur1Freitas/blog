@@ -1,0 +1,41 @@
+<script is:inline>
+    ;(() => {
+        const ONE_SECOND = 1e3
+
+        function addButtons() {
+            const codeBlocks = Array.from(document.querySelectorAll('pre.astro-code'))
+
+            for (const codeBlock of codeBlocks) {
+                const button = document.createElement('button')
+                button.classList.add('copy-code-btn')
+
+                const language = codeBlock.getAttribute('data-language') || 'plaintext'
+                button.textContent = language
+
+                const code = codeBlock.getElementsByTagName('code')[0]
+
+                let timeout = null
+
+                button.onclick = () => {
+                    navigator.clipboard.writeText(code.textContent)
+
+                    button.setAttribute('data-copied', 'true')
+                    button.textContent = '✓ Copiado'
+
+                    if (timeout) {
+                        window.clearTimeout(timeout)
+                    }
+
+                    timeout = setTimeout(() => {
+                        button.setAttribute('data-copied', 'false')
+                        button.textContent = language
+                    }, ONE_SECOND)
+                }
+
+                codeBlock.appendChild(button)
+            }
+        }
+
+        addButtons()
+    })()
+</script>
