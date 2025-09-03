@@ -177,7 +177,8 @@ sup {
 hr {
     margin-top: 1rem;
     margin-bottom: 1rem;
-    color: hsl(var(--border));
+    border: none;
+    border-bottom: 1px solid hsl(var(--border));
 }
 
 h1,
