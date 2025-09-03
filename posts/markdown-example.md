@@ -9,103 +9,116 @@ added: '02/08/2025'
 updated: '02/09/2025'
 ---
 
-This is an example blog post!
+Esse é um exemplo de um post!
 
-# Heading 1
+# 1 Título
 
-This is an example lil thingy wow look at me!
+## 1.1 Título
 
-## Heading 2
+### 1.1.1 Título
 
-### Heading 3
+#### 1.1.1.1 Título
 
-#### Heading 4
+##### 1.1.1.1.1 Título
 
-##### Heading 5
+###### 1.1.1.1.1.1 Título
 
-###### Heading 6
+## Parágrafos
 
-I'm baby tumblr deep v franzen [umami hammock](https://google.com) scenester retro VHS, pop-up truffaut tacos polaroid gochujang. Jean ugh _vexillologist snackwave keytar williamsburg bitters pinterest_. Photo booth schlitz quinoa tbh edison bulb vexillologist occupy single-origin dreamcatcher. **Chartreuse meggings gochujang synth.** Narwhal green juice snackwave thundercats kickstarter XOXO deep v.
+[Lorem Ipsum](https://br.lipsum.com/) é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos.
 
-1. numbered
-2. list
-3. of
-4. items
+[Lorem Ipsum](https://br.lipsum.com/)sobreviveu não só a cinco séculos, como também ao salto para a editoração eletrônica, permanecendo essencialmente inalterado.
 
-Hello there, welcome to my list.
+Se popularizou na década de 60, quando a Letraset lançou decalques contendo passagens de [Lorem Ipsum](https://br.lipsum.com/), e mais recentemente quando passou a ser integrado a softwares de editoração eletrônica como Aldus PageMaker.
 
-- list
-- of
-- items
-    - nested
-    - list
+## Listas
+
+1. lista
+2. numerada
+3. de
+4. itens
+
+Olá! Veja a minha lista:
+
+- lista
+- de
+- itens
+    - lista
+    - aninhada
 - wow
 
-## Hello, babies, I think that you need to understand what a long line length is
+## Lista de Tarefas
 
-V franzen umami hammock scenester retro VHS, pop-up truffaut tacos polaroid heirloom gochujang.
+- [x] tarefa 1
+- [ ] tarefa 2
+- [x] tarefa 3
+- [ ] tarefa 4
 
-- [x] hello
-- [ ] these
-- [x] are
-- [ ] tasks
+## Formatação
 
-**bold** _italic_
-**_bold and italic_**
+**negrito**
 
-```js
-// This is an example of some React
+_itálico_
 
-useEffect(() => {
-    let isCurrent = true
+**_negrito e itálico_**
 
-    if (isCurrent === true) {
-        fetch('...')
-    }
+## Bloco de Código
 
-    return () => {
-        isCurrent = false
-    }
-}, [])
+Com linguagem especificada:
+
+```python
+# Esse é um exemplo de código em Python
+
+def saudacao(nome: str) -> None:
+    print(f"Olá {nome}!")
+
+
+nome = input("Digite seu nome: ")
+saudacao(nome)
 ```
 
-Language-less:
+Sem linguagem especificada:
 
 ```
-useEffect(() => { // wow
-  let isCurrent = true;
+# Esse é um exemplo de código em Python
 
-  if (isCurrent === true) {
-  	fetch('...')
-  }
+def saudacao(nome: str) -> None:
+    print(f"Olá {nome}!")
 
-  return () => {
-  	isCurrent = false;
-  }
-}, [])
+
+nome = input("Digite seu nome: ")
+saudacao(nome)
 ```
 
-A horizontal line:
+## Código em Linha
+
+Um código em linha `console.log('Hello World!')` entre textos normais
+
+## Linha Horizontal
 
 ---
 
-<small>aaaa</small> aaa
+## Citação em Bloco
 
-x<sup>2</sup> aaa
+> "Eu tentei 99 vezes e falhei, mas na centésima tentativa eu consegui, nunca desista de seus objetivos mesmo que esses pareçam impossíveis, a próxima tentativa pode ser vitoriosa."
+>
+> Albert Einstein
 
-x<sub>2</sub> aaa
+## Subescrito e Sobrescrito
 
-Some inline `code` between normal text
+x<sup>2</sup>
 
-> A blockquote, lorem ipsum dolor
+x<sub>2</sub>
 
-Just some normal text, wow.
+## Texto Pequeno
 
----
+Texto normal <small>Texto pequeno</small>
 
-| Example table | Example things |
-| ------------- | -------------- |
-| What          | how            |
-| Why           | when           |
+## Tabelas
 
-Okay, that's it! Good luck! Write more! Follow your dreams!
+| Coluna 1                | Coluna 2  |
+| ----------------------- | --------- |
+| Texto muito longo mesmo | textinnho |
+| `Código em linha`       | :)        |
+
+Ok, é só isso pessoal. Se divirtam em escrever seus blogs!
