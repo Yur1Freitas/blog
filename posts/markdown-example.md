@@ -6,7 +6,7 @@ description: >-
 tags:
     - técnico
 added: '02/08/2025'
-updated: '20/05/2025'
+updated: '02/09/2025'
 ---
 
 This is an example blog post!
