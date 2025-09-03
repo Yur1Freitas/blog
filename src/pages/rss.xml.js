@@ -5,9 +5,7 @@ import { SITE_DESCRIPTION, SITE_TITLE, SITE_URL } from '../config'
 
 const posts = await getCollection('posts')
 const sortedPosts = posts.sort(
-    (a, b) => 
-        new Date(b.data.updated || b.data.added).valueOf() - 
-        new Date(a.data.updated || a.data.added).valueOf()
+    (a, b) => new Date(b.data.updated || b.data.added).valueOf() - new Date(a.data.updated || a.data.added).valueOf()
 )
 
 export const GET = () =>
@@ -19,8 +17,8 @@ export const GET = () =>
             return {
                 link: `/post/${post.data.slug}`,
                 title: post.data.title,
-                pubDate: post.data.added,
                 description: post.data.description,
+                pubDate: post.data.added,
                 content: post.rendered.html,
                 customData: `<updated>${post.data.updated ? post.data.updated : ''}</updated>`
             }
