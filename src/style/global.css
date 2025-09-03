@@ -127,9 +127,19 @@ pre {
     border: 1px solid hsl(var(--border) / var(--codeblock-border-opacity));
 }
 
-code {
+pre > code {
     display: block;
     overflow-x: auto;
+}
+
+:not(pre) > code {
+    display: inline-block;
+    line-height: 1.25;
+    font-size: 0.85rem;
+    font-family: monospace;
+    padding: 0.15rem 0.25rem;
+    border-radius: 0.25rem;
+    background-color: hsl(var(--foreground) / 0.05);
 }
 
 button {
