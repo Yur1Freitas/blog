@@ -110,6 +110,12 @@ a {
     text-decoration-thickness: 0.2ex;
 }
 
+blockquote {
+    font-style: italic;
+    padding-left: 1rem;
+    border-left: 0.15rem solid hsl(var(--border));
+}
+
 pre {
     padding: 1rem;
     margin: 0.25rem 0;
